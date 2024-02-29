@@ -13,10 +13,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.mpierucci.resourcereporducer.resources.composeMultiPlatformPainter
-import org.jetbrains.compose.resources.ExperimentalResourceApi
+import com.mpierucci.resourcereporducer.resources.greetingsString
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
-@OptIn(ExperimentalResourceApi::class)
+
 @Composable
 @Preview
 fun App() {
@@ -32,8 +32,9 @@ fun App() {
                     Modifier.fillMaxWidth(),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
+                    Text(greetingsString())
                     Image(composeMultiPlatformPainter(), null)
-                    Text("Compose: $greeting")
+
                 }
             }
         }
